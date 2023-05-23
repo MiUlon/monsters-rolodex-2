@@ -18,7 +18,7 @@ class App extends Component {
         this.setState(() => {
           return { monsters: user}
         },
-        () => { console.log(this.state) })
+        )
       })
   }
 
@@ -48,14 +48,7 @@ class App extends Component {
         onChange={onSearchFieldChange}
       />
 
-      {/* {
-        filteredMonsters.map((monster) => {
-          return  <div key={monster.id}>
-                    <h1>{ monster.name }</h1>
-                  </div>
-        })
-      } */}
-      <CardList />
+      <CardList monsters={filteredMonsters}/>
     </div>
     );
   }
